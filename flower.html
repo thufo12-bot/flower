@@ -47,24 +47,24 @@
             transform: translateY(-12px) scale(1.03);
             box-shadow: 0 30px 50px -20px rgba(226, 0, 122, 0.3);
         }
-        /* S26 Image 3D Effect */
+        /* Phone Image 3D Effect */
         .phone-3d-wrap {
-            perspective: 1000px;
+            perspective: 1200px;
         }
         .phone-3d-image {
-            transform: rotateY(-10deg) rotateX(5deg);
-            transition: transform 0.5s ease;
-            box-shadow: 20px 20px 50px rgba(0,0,0,0.2);
-            border-radius: 20px;
+            transform: rotateY(-12deg) rotateX(6deg);
+            transition: transform 0.6s ease;
+            box-shadow: 25px 25px 50px rgba(0,0,0,0.25);
+            border-radius: 24px;
         }
         .phone-3d-wrap:hover .phone-3d-image {
-            transform: rotateY(0deg) rotateX(0deg) scale(1.05);
+            transform: rotateY(0deg) rotateX(0deg) scale(1.03);
         }
         /* CTA Button 3D style */
         .cta-button-3d {
             background: linear-gradient(135deg, var(--uplus-magenta), #FF4081);
             box-shadow: 0 8px 0 #b0005e, 0 15px 25px rgba(226, 0, 122, 0.4);
-            transition: all 0.1s active;
+            transition: all 0.1s;
         }
         .cta-button-3d:active {
             transform: translateY(4px);
@@ -95,7 +95,7 @@
             50% { transform: translateY(-20px) rotate(2deg); }
         }
         .text-stroke {
-            text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+            text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
         }
         /* Icon Box 3D Style */
         .icon-sphere {
@@ -103,6 +103,16 @@
             border: 2px solid var(--uplus-magenta);
             border-radius: 50%;
             box-shadow: 10px 10px 20px #d1d1d1, -5px -5px 15px #ffffff;
+        }
+        /* Title flower animation */
+        .title-flower {
+            display: inline-block;
+            vertical-align: middle;
+            animation: rotate-flower 6s linear infinite;
+        }
+        @keyframes rotate-flower {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -113,7 +123,7 @@
             <circle cx="50" cy="50" r="45" fill="#E2007A" />
             <path d="M 30 50 Q 50 20 70 50 Q 50 80 30 50" fill="white" />
         </svg>
-        <span class="text-sm font-black tracking-tighter text-magenta">Simply U<span class="text-gray-400">+</span></span>
+        <span class="text-sm font-black tracking-tighter text-magenta">Simply U<span class="text-gray-400 font-normal">+</span></span>
     </div>
 
     <div id="petals" class="fixed inset-0 pointer-events-none"></div>
@@ -121,39 +131,34 @@
     <!-- Hero Section -->
     <section class="relative pt-28 pb-10 px-6 text-center z-10">
         <div class="max-w-md mx-auto">
-            <!-- Moona 3D SVG -->
+            <!-- Reverted Moona Character SVG -->
             <div class="floating mb-6">
-                <svg viewBox="0 0 240 240" class="w-64 h-64 mx-auto filter drop-shadow-2xl" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <radialGradient id="gradBody" cx="40%" cy="40%" r="60%">
-                            <stop offset="0%" style="stop-color:#FFFDE7" />
-                            <stop offset="100%" style="stop-color:#FFF176" />
-                        </radialGradient>
-                        <radialGradient id="gradPink" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" style="stop-color:#FF80AB" />
-                            <stop offset="100%" style="stop-color:#F50057" />
-                        </radialGradient>
-                    </defs>
-                    <ellipse cx="120" cy="220" rx="80" ry="15" fill="rgba(0,0,0,0.15)" />
-                    <!-- Legs (3D Feel) -->
-                    <path d="M 50 180 Q 20 225 70 225" stroke="url(#gradPink)" stroke-width="30" stroke-linecap="round" fill="none" />
-                    <path d="M 190 180 Q 220 225 170 225" stroke="url(#gradPink)" stroke-width="30" stroke-linecap="round" fill="none" />
-                    <!-- Body (Smooth 3D Volume) -->
-                    <path d="M 60 185 C 60 85 180 85 180 185 L 180 205 Q 120 220 60 205 Z" fill="url(#gradBody)" />
-                    <!-- Swirl on Head -->
-                    <circle cx="125" cy="95" r="35" fill="#FF3D00" />
-                    <path d="M 110 105 Q 125 5 160 100" fill="#FF3D00" />
-                    <!-- Eyes & Mouth -->
-                    <circle cx="110" cy="155" r="7" fill="#222" />
-                    <circle cx="150" cy="155" r="7" fill="#222" />
-                    <rect x="105" y="168" width="50" height="22" rx="11" fill="white" />
-                    <path d="M 115 178 Q 130 188 145 178" stroke="#FF80AB" stroke-width="5" fill="none" stroke-linecap="round" />
-                    <!-- Highlight for 3D gloss -->
-                    <ellipse cx="100" cy="120" rx="15" ry="10" fill="white" opacity="0.3" transform="rotate(-30 100 120)" />
+                <svg viewBox="0 0 240 240" class="w-64 h-64 mx-auto" xmlns="http://www.w3.org/2000/svg">
+                    <ellipse cx="120" cy="210" rx="60" ry="10" fill="rgba(0,0,0,0.1)" />
+                    <!-- Legs -->
+                    <path d="M 60 180 Q 40 210 65 215" stroke="#FF80AB" stroke-width="25" stroke-linecap="round" fill="none" />
+                    <path d="M 90 195 Q 85 220 105 220" stroke="#FF80AB" stroke-width="25" stroke-linecap="round" fill="none" />
+                    <path d="M 150 195 Q 155 220 135 220" stroke="#FF80AB" stroke-width="25" stroke-linecap="round" fill="none" />
+                    <path d="M 180 180 Q 200 210 175 215" stroke="#FF80AB" stroke-width="25" stroke-linecap="round" fill="none" />
+                    <!-- Yellow base legs -->
+                    <path d="M 60 180 Q 45 200 60 205" stroke="#FFF176" stroke-width="22" stroke-linecap="round" fill="none" />
+                    <path d="M 90 195 Q 88 210 100 210" stroke="#FFF176" stroke-width="22" stroke-linecap="round" fill="none" />
+                    <path d="M 150 195 Q 152 210 140 210" stroke="#FFF176" stroke-width="22" stroke-linecap="round" fill="none" />
+                    <path d="M 180 180 Q 195 200 180 205" stroke="#FFF176" stroke-width="22" stroke-linecap="round" fill="none" />
+                    <!-- Body -->
+                    <path d="M 60 180 C 60 100 180 100 180 180 L 180 190 Q 120 205 60 190 Z" fill="#FFF176" />
+                    <!-- Red Head Piece -->
+                    <path d="M 100 115 Q 120 40 145 110" fill="#FF3D00" />
+                    <circle cx="120" cy="110" r="28" fill="#FF3D00" />
+                    <!-- Face -->
+                    <circle cx="105" cy="155" r="5" fill="#333" />
+                    <circle cx="135" cy="155" r="5" fill="#333" />
+                    <rect x="100" y="165" width="40" height="18" rx="9" fill="white" />
+                    <path d="M 110 174 Q 120 180 130 174" stroke="#FF80AB" stroke-width="3" fill="none" stroke-linecap="round" />
                 </svg>
             </div>
             
-            <h1 class="font-handwriting text-5xl font-bold text-magenta mb-4 leading-tight text-stroke">
+            <h1 class="font-handwriting text-5xl font-bold text-magenta mb-4 leading-tight text-stroke text-center">
                 구례 X Uplus<br>
                 산수유꽃 아래서<br>
                 무너랑 노랑? 
@@ -168,9 +173,9 @@
                     </svg>
                 </span>
             </h1>
-            <p class="mt-4 text-xl font-bold text-gray-800 bg-white/40 backdrop-blur-sm py-3 rounded-2xl border border-white/50 shadow-sm">
+            <p class="mt-4 text-xl font-bold text-gray-800 bg-white/40 backdrop-blur-sm py-3 rounded-2xl border border-white/50 shadow-sm text-center mx-auto max-w-xs">
                 26년 3월 14일 ~ 22일<br>
-                <span class="text-magenta text-2xl font-black">구례 산수유마을 유플 부스</span>
+                <span class="text-magenta text-2xl font-black">구례 산수유마을 유플부스</span>
             </p>
         </div>
     </section>
@@ -179,8 +184,8 @@
     <main class="max-w-md mx-auto px-5 pb-24 relative z-10">
         <!-- 2x2 3D Grid -->
         <div class="grid grid-cols-2 gap-4 mb-12">
-            <div class="card-3d p-6">
-                <div class="icon-sphere w-20 h-20 mb-4 flex items-center justify-center p-3">
+            <div class="card-3d p-6 text-center">
+                <div class="icon-sphere w-20 h-20 mb-4 mx-auto flex items-center justify-center p-3">
                     <svg viewBox="0 0 100 100" class="w-full h-full filter drop-shadow-md">
                         <rect x="30" y="60" width="40" height="35" rx="5" fill="#E2007A" />
                         <line x1="50" y1="60" x2="50" y2="10" stroke="#333" stroke-width="6" stroke-linecap="round" />
@@ -190,56 +195,61 @@
                 <h3 class="font-black text-[16px] text-magenta leading-tight">셀카봉 및<br>보조배터리 대여</h3>
             </div>
             
-            <div class="card-3d p-6">
-                <div class="icon-sphere w-20 h-20 mb-4 flex items-center justify-center p-3 text-3xl">🖼️</div>
+            <div class="card-3d p-6 text-center">
+                <div class="icon-sphere w-20 h-20 mb-4 mx-auto flex items-center justify-center p-3 text-3xl">🖼️</div>
                 <h3 class="font-black text-[16px] text-magenta leading-tight">무료사진<br>인화서비스</h3>
             </div>
 
-            <div class="card-3d p-6">
-                <div class="icon-sphere w-20 h-20 mb-4 flex items-center justify-center p-3 text-3xl">🎈</div>
+            <div class="card-3d p-6 text-center">
+                <div class="icon-sphere w-20 h-20 mb-4 mx-auto flex items-center justify-center p-3 text-3xl">🎈</div>
                 <h3 class="font-black text-[16px] text-magenta leading-tight">풍선 팔찌<br>증정</h3>
             </div>
 
-            <div class="card-3d p-6">
-                <div class="icon-sphere w-20 h-20 mb-4 flex items-center justify-center p-3 text-3xl">🎞️</div>
+            <div class="card-3d p-6 text-center">
+                <div class="icon-sphere w-20 h-20 mb-4 mx-auto flex items-center justify-center p-3 text-3xl">🎞️</div>
                 <h3 class="font-black text-[16px] text-magenta leading-tight">무료필름지<br>교체</h3>
             </div>
         </div>
 
-        <!-- Coupon Action -->
+        <!-- Coupon Action Area -->
         <div class="text-center mb-12">
             <div class="bg-white p-8 rounded-[45px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-4 border-magenta relative overflow-hidden">
-                <p class="font-handwriting text-3xl font-bold text-gray-800 mb-2">10초면 예약 끝!</p>
-                <p class="text-sm text-gray-600 mb-8 font-bold">유플러스 단골 등록하고 혜택 누리세요!</p>
-                <a href="https://ucrm.lguplus.co.kr/mbl/v2/rcmd/moveInfo?param=cHBzbTc2ODYmMjAyNjAyMTIxNDI4NTk=" target="_blank" class="cta-button-3d block w-full text-white font-black text-2xl py-6 rounded-3xl active:scale-95 transition-transform">
+                <p class="font-handwriting text-4xl font-bold text-gray-800 mb-2">10초면 예약 끝!</p>
+                <p class="text-lg text-gray-600 mb-2 font-black text-center">유플러스 단골등록하고 혜택 누리세요!</p>
+                <!-- Updated Line 3 phrase as requested -->
+                <p class="text-base text-magenta font-black mb-8 text-center animate-pulse tracking-tight">등록 후 부스직원에게 말해주세요!</p>
+                
+                <a href="https://ucrm.lguplus.co.kr/mbl/v2/rcmd/moveInfo?param=cHBzbTc2ODYmMjAyNjAyMTIxNDI4NTk=" target="_blank" rel="noopener noreferrer" class="cta-button-3d block w-full text-white font-black text-2xl py-6 rounded-3xl active:scale-95 transition-transform">
                     🎁 사은품 쿠폰 받기
                 </a>
             </div>
         </div>
 
-        <!-- Benefit 01: SIM -->
+        <!-- Benefit 01: SIM Swap -->
         <div class="card-3d p-9 mb-10 text-center border-magenta/20 shadow-magenta/10">
             <div class="inline-block bg-magenta text-white text-[11px] font-black px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">Special Benefit 01</div>
-            <p class="text-xl text-gray-800 font-bold leading-snug mb-6">쓰던폰 · 전화번호 그대로<br><span class="text-magenta text-3xl font-black underline decoration-4 underline-offset-8">U+유심교체</span>하면?</p>
+            <p class="text-xl text-gray-800 font-bold leading-snug mb-6 text-center">쓰던폰 · 전화번호 그대로<br><span class="text-magenta text-3xl font-black underline decoration-4 underline-offset-8">U+유심교체</span>하면?</p>
             <div class="bg-yellow-100 rounded-[30px] py-8 px-5 border-2 border-yellow-300 shadow-inner">
-                <p class="text-magenta font-black text-3xl mb-3">월요금 만원대</p>
-                <p class="text-gray-800 font-black text-xl">+ 요금 3개월 지원</p>
+                <p class="text-magenta font-black text-3xl mb-3 text-center">월요금 만원대</p>
+                <p class="text-gray-800 font-black text-xl text-center">+ 요금 3개월 지원</p>
             </div>
         </div>
 
-        <!-- Benefit 02: S26 (3D UI Upgrade) -->
+        <!-- Benefit 02: S26 Purchase -->
         <div class="bg-white border-[10px] border-white rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.15)] overflow-hidden mb-16 relative">
             <div class="p-10 text-center">
-                <div class="inline-block bg-magenta text-white text-[11px] font-black px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase">Special Benefit 02</div>
-                <p class="text-3xl font-black text-gray-800 mb-4"><span class="text-magenta">S26</span> 구매 시 혜택</p>
-                <p class="text-[20px] font-black text-white bg-magenta py-4 px-4 rounded-2xl mb-10 shadow-lg">최신폰도 지역내 최저가 구매가능!</p>
+                <div class="inline-block bg-magenta text-white text-[11px] font-black px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase text-center">Special Benefit 02</div>
+                <p class="text-3xl font-black text-gray-800 mb-4 text-center"><span class="text-magenta">S26</span> 구매 시 혜택</p>
                 
-                <!-- 3D Phone Image Area -->
+                <!-- Fixed One-Line Highlight -->
+                <div class="bg-magenta rounded-2xl mb-10 shadow-lg py-4 px-1 flex justify-center">
+                   <p class="text-[15.5px] sm:text-[18px] font-black text-white whitespace-nowrap overflow-hidden">최신폰도 지역 내 최저가 구매가능!</p>
+                </div>
+                
                 <div class="phone-3d-wrap mb-12">
-                    <img src="image_de8f17.png" alt="S26 Ultra" class="phone-3d-image w-full h-auto" onerror="this.onerror=null; this.src='https://placehold.co/600x400/f3f4f6/E2007A?text=S26+Ultra+3D';">
+                    <img src="s25컬러.jpg" alt="S26 Color Selection" class="phone-3d-image w-full h-auto" onerror="this.onerror=null; this.src='https://placehold.co/800x400/f3f4f6/E2007A?text=S26+Color+Offer';">
                 </div>
 
-                <!-- Numbered Gift List -->
                 <div class="space-y-5">
                     <div class="flex items-center gap-5 bg-gray-50 p-6 rounded-[25px] border border-gray-100 shadow-sm">
                         <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center border-2 border-magenta/20 text-3xl shadow-md">💻</div>
@@ -263,27 +273,27 @@
                         </div>
                     </div>
                 </div>
-                <p class="mt-10 text-[14px] text-gray-400 font-bold italic">* 선착순 상담 및 개통 혜택</p>
+                <p class="mt-10 text-[14px] text-gray-400 font-bold italic text-center">* 선착순 상담 및 개통 혜택</p>
             </div>
         </div>
 
-        <!-- Location -->
+        <!-- Location Info -->
         <div class="mt-12 text-center bg-white/60 backdrop-blur-md p-8 rounded-[40px] border-2 border-white shadow-lg">
-            <h3 class="text-2xl font-black text-magenta mb-5 text-stroke">📍 유플 부스는 어디에?</h3>
-            <p class="text-lg font-bold text-gray-800 mb-6 leading-relaxed">구례 산수유 마을 <span class="text-magenta font-black underline underline-offset-4 decoration-2">메인 광장 입구</span><br>"제일 큰 노란색 부스"를 찾아주세요!</p>
+            <h3 class="text-2xl font-black text-magenta mb-5 text-stroke text-center">📍 유플부스는 어디에?</h3>
+            <p class="text-lg font-bold text-gray-800 mb-6 leading-relaxed text-center">구례 산수유 마을 <span class="text-magenta font-black underline underline-offset-4 decoration-2">메인 광장 입구</span><br>"제일 큰 노란색 부스"를 찾아주세요!</p>
             <div class="aspect-video bg-yellow-200 rounded-[30px] border-2 border-dashed border-white flex flex-col items-center justify-center text-gray-500 overflow-hidden relative shadow-inner">
-               <p class="italic text-sm font-black mb-1">[부스 위치 안내 지도]</p>
-               <svg width="40" height="40" viewBox="0 0 100 100" class="opacity-40 animate-pulse"><circle cx="50" cy="50" r="40" fill="#E2007A"/></svg>
+               <p class="italic text-sm font-black mb-1 text-center">[부스 위치 안내 지도]</p>
+               <svg width="40" height="40" viewBox="0 0 100 100" class="opacity-40 animate-pulse mx-auto"><circle cx="50" cy="50" r="40" fill="#E2007A"/></svg>
             </div>
         </div>
 
-        <!-- Footer Buttons -->
+        <!-- Footnote/Contact Buttons -->
         <div class="mt-12 space-y-5">
-            <a href="https://open.kakao.com/o/sWmnjdii" target="_blank" class="flex items-center justify-center gap-3 w-full bg-[#FEE500] text-[#3C1E1E] py-5 rounded-[24px] font-black shadow-[0_8px_0_#D4C000] hover:brightness-105 active:translate-y-1 active:shadow-none transition-all text-lg">
+            <a href="https://open.kakao.com/o/sWmnjdii" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full bg-[#FEE500] text-[#3C1E1E] py-5 rounded-[24px] font-black shadow-[0_8px_0_#D4C000] hover:brightness-105 active:translate-y-1 active:shadow-none transition-all text-lg text-center">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.557 1.707 4.8 4.33 6.091l-.665 2.422c-.042.155.05.312.204.354.047.013.096.013.143.001l2.863-1.892c.695.1 1.408.153 2.125.153 4.97 0 9-3.185 9-7.115S16.97 3 12 3z"/></svg>
                 지인에게 무상대여 알려주기
             </a>
-            <a href="tel:010-0000-0000" class="flex items-center justify-center gap-3 w-full bg-magenta text-white py-5 rounded-[24px] font-black shadow-[0_8px_0_#B0005E] hover:brightness-110 active:translate-y-1 active:shadow-none transition-all text-lg">
+            <a href="tel:010-0000-0000" class="flex items-center justify-center gap-3 w-full bg-magenta text-white py-5 rounded-[24px] font-black shadow-[0_8px_0_#B0005E] hover:brightness-110 active:translate-y-1 active:shadow-none transition-all text-lg text-center">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.82 12.82 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 바로 전화로 대여 예약하기
             </a>
@@ -292,8 +302,8 @@
 
     <!-- Footer -->
     <footer class="py-12 text-center text-gray-500 text-[11px] font-bold relative z-10 bg-yellow-50/50">
-        <p class="mb-2 text-magenta text-sm">유플러스와 함께 즐거운 봄나들이 되세요!</p>
-        <p>© 2026 LG Uplus Corp. All rights reserved.</p>
+        <p class="mb-2 text-magenta text-sm text-center">유플러스와 함께 즐거운 봄나들이 되세요!</p>
+        <p class="text-center">© 2026 LG Uplus Corp. All rights reserved.</p>
     </footer>
 
     <script>
