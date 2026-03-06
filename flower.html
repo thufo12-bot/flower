@@ -131,26 +131,21 @@
     <!-- Hero Section -->
     <section class="relative pt-28 pb-10 px-6 text-center z-10">
         <div class="max-w-md mx-auto">
-            <!-- Reverted Moona Character SVG -->
+            <!-- Original Single Moona SVG -->
             <div class="floating mb-6">
                 <svg viewBox="0 0 240 240" class="w-64 h-64 mx-auto" xmlns="http://www.w3.org/2000/svg">
                     <ellipse cx="120" cy="210" rx="60" ry="10" fill="rgba(0,0,0,0.1)" />
-                    <!-- Legs -->
                     <path d="M 60 180 Q 40 210 65 215" stroke="#FF80AB" stroke-width="25" stroke-linecap="round" fill="none" />
                     <path d="M 90 195 Q 85 220 105 220" stroke="#FF80AB" stroke-width="25" stroke-linecap="round" fill="none" />
                     <path d="M 150 195 Q 155 220 135 220" stroke="#FF80AB" stroke-width="25" stroke-linecap="round" fill="none" />
                     <path d="M 180 180 Q 200 210 175 215" stroke="#FF80AB" stroke-width="25" stroke-linecap="round" fill="none" />
-                    <!-- Yellow base legs -->
                     <path d="M 60 180 Q 45 200 60 205" stroke="#FFF176" stroke-width="22" stroke-linecap="round" fill="none" />
                     <path d="M 90 195 Q 88 210 100 210" stroke="#FFF176" stroke-width="22" stroke-linecap="round" fill="none" />
                     <path d="M 150 195 Q 152 210 140 210" stroke="#FFF176" stroke-width="22" stroke-linecap="round" fill="none" />
                     <path d="M 180 180 Q 195 200 180 205" stroke="#FFF176" stroke-width="22" stroke-linecap="round" fill="none" />
-                    <!-- Body -->
                     <path d="M 60 180 C 60 100 180 100 180 180 L 180 190 Q 120 205 60 190 Z" fill="#FFF176" />
-                    <!-- Red Head Piece -->
                     <path d="M 100 115 Q 120 40 145 110" fill="#FF3D00" />
                     <circle cx="120" cy="110" r="28" fill="#FF3D00" />
-                    <!-- Face -->
                     <circle cx="105" cy="155" r="5" fill="#333" />
                     <circle cx="135" cy="155" r="5" fill="#333" />
                     <rect x="100" y="165" width="40" height="18" rx="9" fill="white" />
@@ -184,12 +179,21 @@
     <main class="max-w-md mx-auto px-5 pb-24 relative z-10">
         <!-- 2x2 3D Grid -->
         <div class="grid grid-cols-2 gap-4 mb-12">
+            <!-- Item 1: Selfie Stick (Updated SVG based on reference) -->
             <div class="card-3d p-6 text-center">
                 <div class="icon-sphere w-20 h-20 mb-4 mx-auto flex items-center justify-center p-3">
                     <svg viewBox="0 0 100 100" class="w-full h-full filter drop-shadow-md">
-                        <rect x="30" y="60" width="40" height="35" rx="5" fill="#E2007A" />
-                        <line x1="50" y1="60" x2="50" y2="10" stroke="#333" stroke-width="6" stroke-linecap="round" />
-                        <rect x="25" y="5" width="50" height="20" rx="4" fill="#333" />
+                        <!-- Stick handle (Pinkish Magenta as per image) -->
+                        <rect x="35" y="75" width="10" height="22" rx="5" fill="#FF80AB" stroke="#333" stroke-width="1.5" transform="rotate(-35 40 85)"/>
+                        <!-- Extendable pole -->
+                        <line x1="40" y1="85" x2="65" y2="35" stroke="#333" stroke-width="6" stroke-linecap="round" />
+                        <line x1="40" y1="85" x2="65" y2="35" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity="0.3" />
+                        <!-- Phone holder mount -->
+                        <rect x="52" y="28" width="35" height="22" rx="3" fill="white" stroke="#333" stroke-width="1.5" transform="rotate(-15 70 39)"/>
+                        <!-- Phone Screen -->
+                        <rect x="56" y="32" width="27" height="14" rx="1" fill="#E3F2FD" transform="rotate(-15 70 39)"/>
+                        <!-- Character reference detail -->
+                        <circle cx="70" cy="28" r="4" fill="#ccc" stroke="#333" stroke-width="1" />
                     </svg>
                 </div>
                 <h3 class="font-black text-[16px] text-magenta leading-tight">셀카봉 및<br>보조배터리 대여</h3>
@@ -211,13 +215,12 @@
             </div>
         </div>
 
-        <!-- Coupon Action Area -->
+        <!-- Coupon Action -->
         <div class="text-center mb-12">
             <div class="bg-white p-8 rounded-[45px] shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-4 border-magenta relative overflow-hidden">
                 <p class="font-handwriting text-4xl font-bold text-gray-800 mb-2">10초면 예약 끝!</p>
                 <p class="text-lg text-gray-600 mb-2 font-black text-center">유플러스 단골등록하고 혜택 누리세요!</p>
-                <!-- Updated Line 3 phrase as requested -->
-                <p class="text-base text-magenta font-black mb-8 text-center animate-pulse tracking-tight">등록 후 부스직원에게 말해주세요!</p>
+                <p class="text-base text-magenta font-black mb-8 text-center animate-pulse tracking-tight text-stroke">등록 후 부스직원에게 말해주세요!</p>
                 
                 <a href="https://ucrm.lguplus.co.kr/mbl/v2/rcmd/moveInfo?param=cHBzbTc2ODYmMjAyNjAyMTIxNDI4NTk=" target="_blank" rel="noopener noreferrer" class="cta-button-3d block w-full text-white font-black text-2xl py-6 rounded-3xl active:scale-95 transition-transform">
                     🎁 사은품 쿠폰 받기
@@ -225,7 +228,7 @@
             </div>
         </div>
 
-        <!-- Benefit 01: SIM Swap -->
+        <!-- Benefit 01: SIM -->
         <div class="card-3d p-9 mb-10 text-center border-magenta/20 shadow-magenta/10">
             <div class="inline-block bg-magenta text-white text-[11px] font-black px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">Special Benefit 01</div>
             <p class="text-xl text-gray-800 font-bold leading-snug mb-6 text-center">쓰던폰 · 전화번호 그대로<br><span class="text-magenta text-3xl font-black underline decoration-4 underline-offset-8">U+유심교체</span>하면?</p>
@@ -235,41 +238,41 @@
             </div>
         </div>
 
-        <!-- Benefit 02: S26 Purchase -->
+        <!-- Benefit 02: S26 (Fixed One Line Text) -->
         <div class="bg-white border-[10px] border-white rounded-[50px] shadow-[0_40px_80px_rgba(0,0,0,0.15)] overflow-hidden mb-16 relative">
             <div class="p-10 text-center">
                 <div class="inline-block bg-magenta text-white text-[11px] font-black px-4 py-1.5 rounded-full mb-6 tracking-widest uppercase text-center">Special Benefit 02</div>
                 <p class="text-3xl font-black text-gray-800 mb-4 text-center"><span class="text-magenta">S26</span> 구매 시 혜택</p>
                 
-                <!-- Fixed One-Line Highlight -->
+                <!-- whitespace-nowrap added to prevent wrapping -->
                 <div class="bg-magenta rounded-2xl mb-10 shadow-lg py-4 px-1 flex justify-center">
                    <p class="text-[15.5px] sm:text-[18px] font-black text-white whitespace-nowrap overflow-hidden">최신폰도 지역 내 최저가 구매가능!</p>
                 </div>
                 
                 <div class="phone-3d-wrap mb-12">
-                    <img src="s25컬러.jpg" alt="S26 Color Selection" class="phone-3d-image w-full h-auto" onerror="this.onerror=null; this.src='https://placehold.co/800x400/f3f4f6/E2007A?text=S26+Color+Offer';">
+                    <img src="s25컬러.jpg" alt="S26 구매 혜택" class="phone-3d-image w-full h-auto" onerror="this.onerror=null; this.src='https://placehold.co/800x400/f3f4f6/E2007A?text=S26+Colors';">
                 </div>
 
                 <div class="space-y-5">
-                    <div class="flex items-center gap-5 bg-gray-50 p-6 rounded-[25px] border border-gray-100 shadow-sm">
-                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center border-2 border-magenta/20 text-3xl shadow-md">💻</div>
-                        <div class="text-left">
-                            <p class="text-magenta font-black text-sm mb-1">혜택 1. 화면 큰</p>
-                            <p class="text-xl font-black text-gray-800">[갤럭시 패드] <span class="text-magenta italic">쏜다!</span></p>
+                    <div class="flex items-center gap-4 bg-gray-50 p-5 rounded-[25px] border border-gray-100 shadow-sm">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex-shrink-0 flex items-center justify-center border-2 border-magenta/20 text-2xl shadow-md">💻</div>
+                        <div class="text-left overflow-hidden">
+                            <p class="text-magenta font-black text-xs mb-0.5 whitespace-nowrap">혜택 1. 화면 큰</p>
+                            <p class="text-lg font-black text-gray-800 whitespace-nowrap">[갤럭시 패드] <span class="text-magenta italic">쏜다!</span></p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 bg-gray-50 p-6 rounded-[25px] border border-gray-100 shadow-sm">
-                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center border-2 border-magenta/20 text-3xl shadow-md">⌚</div>
-                        <div class="text-left">
-                            <p class="text-magenta font-black text-sm mb-1">혜택 2. 손목 위 필수템</p>
-                            <p class="text-xl font-black text-gray-800">[갤럭시 워치] <span class="text-magenta italic">쏜다!</span></p>
+                    <div class="flex items-center gap-4 bg-gray-50 p-5 rounded-[25px] border border-gray-100 shadow-sm">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex-shrink-0 flex items-center justify-center border-2 border-magenta/20 text-2xl shadow-md">⌚</div>
+                        <div class="text-left overflow-hidden">
+                            <p class="text-magenta font-black text-xs mb-0.5 whitespace-nowrap">혜택 2. 손목 위 필수템</p>
+                            <p class="text-lg font-black text-gray-800 whitespace-nowrap">[갤럭시 워치] <span class="text-magenta italic">쏜다!</span></p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-5 bg-gray-50 p-6 rounded-[25px] border border-gray-100 shadow-sm">
-                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center border-2 border-magenta/20 text-3xl shadow-md">🎧</div>
-                        <div class="text-left">
-                            <p class="text-magenta font-black text-sm mb-1">혜택 3. 노이즈캔슬링</p>
-                            <p class="text-xl font-black text-gray-800">[갤럭시 버즈] <span class="text-magenta italic">쏜다!</span></p>
+                    <div class="flex items-center gap-4 bg-gray-50 p-5 rounded-[25px] border border-gray-100 shadow-sm">
+                        <div class="w-14 h-14 bg-white rounded-2xl flex-shrink-0 flex items-center justify-center border-2 border-magenta/20 text-2xl shadow-md">🎧</div>
+                        <div class="text-left overflow-hidden">
+                            <p class="text-magenta font-black text-xs mb-0.5 whitespace-nowrap">혜택 3. 노이즈캔슬링</p>
+                            <p class="text-lg font-black text-gray-800 whitespace-nowrap">[갤럭시 버즈] <span class="text-magenta italic">쏜다!</span></p>
                         </div>
                     </div>
                 </div>
@@ -277,7 +280,7 @@
             </div>
         </div>
 
-        <!-- Location Info -->
+        <!-- Location Box -->
         <div class="mt-12 text-center bg-white/60 backdrop-blur-md p-8 rounded-[40px] border-2 border-white shadow-lg">
             <h3 class="text-2xl font-black text-magenta mb-5 text-stroke text-center">📍 유플부스는 어디에?</h3>
             <p class="text-lg font-bold text-gray-800 mb-6 leading-relaxed text-center">구례 산수유 마을 <span class="text-magenta font-black underline underline-offset-4 decoration-2">메인 광장 입구</span><br>"제일 큰 노란색 부스"를 찾아주세요!</p>
@@ -287,7 +290,7 @@
             </div>
         </div>
 
-        <!-- Footnote/Contact Buttons -->
+        <!-- Footer Buttons -->
         <div class="mt-12 space-y-5">
             <a href="https://open.kakao.com/o/sWmnjdii" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full bg-[#FEE500] text-[#3C1E1E] py-5 rounded-[24px] font-black shadow-[0_8px_0_#D4C000] hover:brightness-105 active:translate-y-1 active:shadow-none transition-all text-lg text-center">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3c-4.97 0-9 3.185-9 7.115 0 2.557 1.707 4.8 4.33 6.091l-.665 2.422c-.042.155.05.312.204.354.047.013.096.013.143.001l2.863-1.892c.695.1 1.408.153 2.125.153 4.97 0 9-3.185 9-7.115S16.97 3 12 3z"/></svg>
